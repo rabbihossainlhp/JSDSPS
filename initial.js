@@ -87,4 +87,77 @@
  * 
 **/ 
 
-    
+// //TODO Find Maximum number in an array    
+
+// const findMaxOf_array = [12,34,56,78,90,11,203,45,67,89];
+
+// const MaxArray = (array)=>{
+//     let max = array[0];
+//     for(let i = 0; i<array.length; i++){
+//         if(array[i]>max){
+//             max = array[i];
+//         }
+//     }
+//     return max;
+// }
+
+// console.log(MaxArray(findMaxOf_array));
+
+// /**
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+// **/ 
+
+// //TODO Find Minimum  number in an array    
+
+// const findMinOf_array = [12,34,56,8,9,11,203,45,67,89];
+
+// const MinArray = (array)=>{
+//     let min = array[0];
+//     for(let i = 0; i<array.length; i++){
+//         if(array[i]<min){
+//             min = array[i];
+//         }
+//     }
+//     return min;
+// }
+
+// console.log(MinArray(findMinOf_array));
+
+// /**
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+//  * 
+// **/ 
+
+// //TODO Print array in reverse
+
+// const arr = [12,34,56,8,9,11,203,45,67,89];
+
+// const reverseArray= (array)=>{
+//     for(let i = array.length-1; i>=0; i--){
+//         console.log(array[i]);
+//     }
+// }
+
+// reverseArray(arr); 
+

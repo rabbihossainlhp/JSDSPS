@@ -30,8 +30,12 @@ This repository documents my daily progress as I learn, implement, and master co
 - [x] Prime number finder
 - [x] Factorial calculator
 - [x] Sum of digits
+- [x] Find Maximum & Minimum number in  an  array
+- [x] Print array in reverse    
 - [x] LeetCode: Add Digits
 - [x] LeetCode: Number Complement
+- [x] LeetCode: Running sum of 1D array 
+- [x] LeetCode: Richest Coustomer Welth
 - [ ] More to come...
 
 ---
