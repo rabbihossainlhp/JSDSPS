@@ -103,20 +103,20 @@
 
 // console.log(MaxArray(findMaxOf_array));
 
-// /**
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-// **/ 
+/** 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
 
 // //TODO Find Minimum  number in an array    
 
@@ -134,20 +134,20 @@
 
 // console.log(MinArray(findMinOf_array));
 
-// /**
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-//  * 
-// **/ 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
 
 // //TODO Print array in reverse
 
@@ -161,3 +161,67 @@
 
 // reverseArray(arr); 
 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ **/ 
+
+// //TODO Search an element in an array (linear search and binary search)
+
+// const searching_array_linner = (array, target)=>{
+//     for (let i of array){
+//         if (i=== target){
+//             return i;
+//         }
+//     }
+// }
+
+// const test_array = [12,34,56,78,90,11,203,45,67,89];
+// console.log(searching_array_linner(test_array,78));
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+
+// //TODO Binary Search (only works on sorted array)
+
+// const searching_array_binary = (array, target)=>{
+//     let left = 0;
+//     let right = array.length -1;
+
+//     while(left <= right){
+//         let middle = Math.floor((left+right)/2);
+
+//         if(array[middle] === target){
+//             return middle;
+//         }else if(array[middle] < target){
+//             left = middle+1;
+//         }else{
+//             right = middle -1;
+//         }
+//     }
+// }
+
+// const test_array2 = [12,34,56,78,90,203,445,819];
+// console.log(searching_array_binary(test_array2,445));
