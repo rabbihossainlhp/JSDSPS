@@ -96,20 +96,137 @@
  * 
 **/ 
 //TODO Problem-4; Richest Coustomer Welth     
-const RichestCoustomerWelth = function(accounts) {
-    let result = 0;
-    for (let account of accounts){
-        let sum = 0;
-        for(let i = 0; i<account.length; i++){
-            sum += account[i];
-        }
-        if (result <= sum ){
-            result = sum;
-        }
-    }  
-    return result;
+// const RichestCoustomerWelth = function(accounts) {
+//     let result = 0;
+//     for (let account of accounts){
+//         let sum = 0;
+//         for(let i = 0; i<account.length; i++){
+//             sum += account[i];
+//         }
+//         if (result <= sum ){
+//             result = sum;
+//         }
+//     }  
+//     return result;
+// }
+
+// let arr = [[1,2,43,4],[4,5,6,5]];
+
+// console.log(RichestCoustomerWelth(arr));
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+//TODO Problem-5; Finding the Maximum Frequency in an array 
+
+let exarray = [1,2,3,4,5,4,2,1,6,7,7,7];
+let exarray2 = [1,2,3,4,5,6,7];
+
+// function Maximum_Frequency(arr){
+//     let freq = {};
+//     let sum = 0;
+//     let max = 0;
+
+//     for(let element of arr){
+//         freq[element] = (freq[element] || 0) +1;
+//     }
+
+//     for(key in freq){
+//         if(freq[key] > max){
+//             max = freq[key];
+//         }
+//     }
+
+//     for(let key in freq){
+//         if(freq[key]===max){
+//             sum += freq[key];
+//         }
+//     }
+//     return sum ;
+    
+// }
+
+// console.log(Maximum_Frequency(exarray));
+// console.log(Maximum_Frequency(exarray2));
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+//TODO Problem-6; Remove duplicates from sorted array...
+
+// const array = [0,1,1,2,3,3,4,5,6,6,6,7,8,9,9,10];
+
+// const removeDuplicateElement =  (nums)=>{
+//     if(nums.length === 0) return 0;
+//     let k = 1;
+//     for(let i=1; i<nums.length; i++){
+//         if(nums[i] !== nums[i-1]){
+//             nums[k] = nums[i];
+//             k++
+//         }
+//     }return k;
+// }
+    
+// console.log(removeDuplicateElement(array));
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+//TODO Problem-7; Two Sum
+
+const array = [1,2,6,7,8,4];
+
+const TwoSum = (nums,target)=>{
+
+   
+
+    // let result = [];
+    // let first = 0; let second = 1;
+    // for (let i = 0; i< nums.length; i++){
+    //     if(nums[first] + nums[second] === target){
+   
+    //         result.push(nums.indexOf(nums[first]));
+    //         result.push(nums.indexOf(nums[second]));
+    //         return result;
+    //     }else{
+    //         first ++;
+    //         second ++;
+    //     }
+    // }
 }
 
-let arr = [[1,2,43,4],[4,5,6,5]];
-
-console.log(RichestCoustomerWelth(arr));
+TwoSum(array,10)
+console.log(TwoSum(array,7))

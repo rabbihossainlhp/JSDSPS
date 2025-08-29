@@ -225,3 +225,64 @@
 
 // const test_array2 = [12,34,56,78,90,203,445,819];
 // console.log(searching_array_binary(test_array2,445));
+
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+
+// //TODO Frequency Count 
+
+// let array = [1,2,3,4,5,6,7,8,9,10,2,5,4,6,7,1,3,2];
+
+// const frequencyCount = (array)=>{
+//     let freq = {};
+//     for (let elem of array){
+//         freq[elem] = (freq[elem] || 0) + 1;
+//     }
+//     return freq;
+// }
+
+// console.log(frequencyCount(array))   
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+
+// //TODO Remove duplicate element
+
+// const array = [1,2,3,4,5,6,7,8,9,10,2,5,4,6,7,1,3,2];
+
+// const Remove_Duplicate = (arr)=>{
+//     let newarray = [];
+//     for(let elm of arr){
+//         if(!newarray.includes(elm)){
+//             newarray.push(elm)
+//         }
+//     }
+//     return newarray;
+// }
+
+// console.log(Remove_Duplicate(array))
