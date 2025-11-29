@@ -124,7 +124,8 @@
  * 
  * 
  * 
- * 
+ * console.log(test_array.shift())
+
  * 
  * 
 **/ 
@@ -205,28 +206,64 @@ let exarray2 = [1,2,3,4,5,6,7];
  * 
  * 
 **/ 
-//TODO Problem-7; Two Sum
+//TODO Problem-7; Find The Difference
 
-const array = [1,2,6,7,8,4];
+let s = "";
+let ss = "fsfsyt";
 
-const TwoSum = (nums,target)=>{
-
-   
-
-    // let result = [];
-    // let first = 0; let second = 1;
-    // for (let i = 0; i< nums.length; i++){
-    //     if(nums[first] + nums[second] === target){
-   
-    //         result.push(nums.indexOf(nums[first]));
-    //         result.push(nums.indexOf(nums[second]));
-    //         return result;
-    //     }else{
-    //         first ++;
-    //         second ++;
-    //     }
-    // }
+var findDifference = function (s,t){
+    let start = 0;
+    let res = "";
+    for(let i = 0; i<t.length; i++){
+        if(s[start] !== t[i]){
+            res += t[i];
+        }
+        start++;
+    }
+    return res;
 }
 
-TwoSum(array,10)
-console.log(TwoSum(array,7))
+console.log(findDifference(s,ss))
+
+
+
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+**/ 
+//TODO Problem-7; Two Sum
+
+// const array = [1,2,6,7,8,4];
+
+// const TwoSum = (nums,target)=>{
+
+   
+
+//     // let result = [];
+//     // let first = 0; let second = 1;
+//     // for (let i = 0; i< nums.length; i++){
+//     //     if(nums[first] + nums[second] === target){
+   
+//     //         result.push(nums.indexOf(nums[first]));
+//     //         result.push(nums.indexOf(nums[second]));
+//     //         return result;
+//     //     }else{
+//     //         first ++;
+//     //         second ++;
+//     //     }
+//     // }
+// }
+
+// TwoSum(array,10)
+// console.log(TwoSum(array,7))
