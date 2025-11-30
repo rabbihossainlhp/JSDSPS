@@ -107,7 +107,6 @@ const firstString = "hellow world";
 const revString = (string)=>{
     // let revArray = string.split("");
     // let revStr = ''
-
     // for(let i = revArray.length-1; i >= 0; i--){
     //     revStr+=revArray[i];
     // }
@@ -120,6 +119,52 @@ const revString = (string)=>{
 
 }
 
-
-
 console.log(revString('hello'));
+
+
+
+//another challange was reverse an Integer.....
+
+const revInt = (int)=>{
+    const int_as_string = int.toString().split('').reverse().join('');
+    return parseInt(int_as_string);
+}
+
+console.log(revInt(-123));
+
+
+
+///another one is sentence capitalization......\
+const makeCapitalize = (sentence)=>{
+    const Capitalize = sentence.split(' ').map(item =>{
+        return item.charAt(0).toUpperCase() + item.slice(1);
+    }).join(' ');
+    
+    return Capitalize;
+    
+}
+
+console.log(makeCapitalize("hello world"));
+console.log(makeCapitalize("naya naya learning"));
+
+
+
+
+//okey now we'll try more interesting and common one which is "FizzBuzz"
+
+const fizzBuzz = ( number ) => {
+    for ( let i = 1; i <= number; i++ ) {
+        if ( i % 3 === 0 && i % 5 === 0 ){
+            console.log("FizzBuzz");
+        }else if( i % 5 === 0) {
+            console.log("Buzz");
+        }else if( i % 3 === 0 ) {
+            console.log("Fizz");
+        }else {
+            console.log(i);
+        }
+    }
+}
+
+
+fizzBuzz(15)
