@@ -168,3 +168,23 @@ const fizzBuzz = ( number ) => {
 
 
 fizzBuzz(15)
+
+
+
+
+
+//here another hard challenge....
+//which is basically I can take array and a chunck size as input then I have to split that array based on that size...
+
+const chunckBasedArray = (arr,cSize) => {
+    const newChunkArray = [];
+    for(let i = 0; i<arr.length; i+=cSize){
+        const chunckArray = arr.slice(i, i+cSize);
+        newChunkArray.push(chunckArray);
+
+    }
+    return newChunkArray;
+}
+
+
+console.log(chunckBasedArray([2,3,5,4,3,2,4,3,2,2], 3))
