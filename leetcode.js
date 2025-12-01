@@ -244,26 +244,15 @@ console.log(findDifference(s,ss))
 **/ 
 //TODO Problem-7; Two Sum
 
-// const array = [1,2,6,7,8,4];
-
-// const TwoSum = (nums,target)=>{
-
-   
-
-//     // let result = [];
-//     // let first = 0; let second = 1;
-//     // for (let i = 0; i< nums.length; i++){
-//     //     if(nums[first] + nums[second] === target){
-   
-//     //         result.push(nums.indexOf(nums[first]));
-//     //         result.push(nums.indexOf(nums[second]));
-//     //         return result;
-//     //     }else{
-//     //         first ++;
-//     //         second ++;
-//     //     }
-//     // }
-// }
-
-// TwoSum(array,10)
-// console.log(TwoSum(array,7))
+///One more common popular problem of array which is Two sum.....
+const twoSum = (nums,target) => {
+    for( let i = 0; i < nums.length; i++){
+        for(let j = i+1; j < nums.length; j++){
+            const checking = nums[i]+nums[j];
+            if(checking === target){ 
+                return [i,j];
+            }
+        }
+    }
+}
+console.log(twoSum([1,2,3,4,3,4,5,6,7],9))
