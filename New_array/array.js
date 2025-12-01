@@ -188,3 +188,22 @@ const chunckBasedArray = (arr,cSize) => {
 
 
 console.log(chunckBasedArray([2,3,5,4,3,2,4,3,2,2], 3))
+
+
+
+
+
+///One more common popular problem of array which is Two sum.....
+const twoSum = (nums,target) => {
+    for( let i = 0; i < nums.length; i++){
+        for(let j = i+1; j < nums.length; j++){
+            const checking = nums[i]+nums[j];
+            if(checking === target){ 
+                return [i,j];
+            }
+        }
+    }
+}
+
+
+console.log(twoSum([1,2,3,4,3,4,5,6,7],9))
