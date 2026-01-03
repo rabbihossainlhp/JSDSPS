@@ -118,6 +118,33 @@ class customLinkedList {
         this.tail = newNode;
         this.length ++;
     }
+
+    pop(){
+
+        if(!this.head){
+            return undefined;
+        }
+
+
+        let temporary = this.head;
+        let previous = this.head;
+
+        while(temporary.next){
+            previous = temporary;
+            temporary = previous.next;
+        }
+
+        this.tail = previous;
+        this.tail.next = null;
+        this.length --;
+
+
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null;
+        }
+
+    }
 }
 
 
@@ -125,5 +152,12 @@ const clgLinkedList = new customLinkedList(1);
 console.log(clgLinkedList);
 
 clgLinkedList.push(2);
+clgLinkedList.push(32);
+clgLinkedList.push(24);
+clgLinkedList.pop()
+clgLinkedList.pop()
+// clgLinkedList.pop()
+// clgLinkedList.pop()
+// clgLinkedList.pop()
 
 console.log(clgLinkedList)
