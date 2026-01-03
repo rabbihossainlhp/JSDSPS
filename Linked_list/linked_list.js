@@ -100,8 +100,30 @@ class customLinkedList {
         this.tail = this.head;
         this.length = 1;
     }
+
+
+
+    //push method...
+
+    push(value){
+        let newNode = new node(value);
+
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }
+
+    
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length ++;
+    }
 }
 
 
 const clgLinkedList = new customLinkedList(1);
 console.log(clgLinkedList);
+
+clgLinkedList.push(2);
+
+console.log(clgLinkedList)
