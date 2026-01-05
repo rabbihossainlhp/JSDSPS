@@ -179,33 +179,89 @@ class customLinkedList {
             this.tail = null;
         }
     }
+
+
+    //get the first element/item of this linkedlist.....
+    getFisrtElement(){
+        if(!this.head){
+            return undefined;
+        }
+
+        return this.head;
+    }
+
+    getLastElement(){
+        if(!this.head){
+            return undefined;
+        }
+
+        let temp = this.head;
+        while(temp){
+            if(!temp.next){
+                return temp
+            }
+            temp = temp.next;
+        }
+
+        return temp;
+    }
+
+
+    //now this willbe little bit complicated to get element by index....
+    getElementByIndex(idx){
+        if(!this.head){
+            return undefined;
+        }
+
+        let result = this.head;
+
+        for(let i = 0; i < idx; i++){
+            result = result.next;
+        }
+
+        return result;
+    }
+
 }
 
 
+
+
+
+
+
 const clgLinkedList = new customLinkedList(1);
-console.log(clgLinkedList);
+// console.log(clgLinkedList);
 
 clgLinkedList.push(2);
 clgLinkedList.push(32);
 clgLinkedList.push(24);
-clgLinkedList.pop()
-clgLinkedList.pop()
 // clgLinkedList.pop()
 // clgLinkedList.pop()
-// clgLinkedList.pop()
+// // clgLinkedList.pop()
+// // clgLinkedList.pop()
+// // clgLinkedList.pop()
+
+// // console.log(clgLinkedList)
+
+// clgLinkedList.unshift(0);
+// clgLinkedList.unshift(11);
+// clgLinkedList.unshift(121);
+// clgLinkedList.unshift(90);
+
+// // console.log(clgLinkedList)
+
+
+// // clgLinkedList.shift();
+// clgLinkedList.shift();
+// clgLinkedList.push(3)
+// clgLinkedList.push(44)
+
+
 
 console.log(clgLinkedList)
-
-clgLinkedList.unshift(0);
-clgLinkedList.unshift(11);
-clgLinkedList.unshift(121);
-console.log(clgLinkedList)
+// console.log(clgLinkedList.getFisrtElement())
+// console.log(clgLinkedList.getLastElement())
 
 
-clgLinkedList.shift();
-clgLinkedList.shift();
-clgLinkedList.shift();
-
-
-
-console.log(clgLinkedList)
+console.log(clgLinkedList.getElementByIndex(0))
