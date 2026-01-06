@@ -222,6 +222,34 @@ class customLinkedList {
         return result;
     }
 
+
+
+    //now I'll try to a "set" method which will update the item based on index basically.....
+    set(idx,val){
+        if(!this.head || idx<0 || idx === null ){
+            return undefined;
+        }
+
+        let point = this.head;
+
+        for(let i = 0; i<idx; i++){
+            point = point.next;
+        }
+
+        point.head = val;
+
+        return point;
+
+
+
+        // let temp = this.getElementByIndex(idx);
+        // if(temp){
+        //     temp.head = val;
+        // }
+
+        // return temp
+    }
+
 }
 
 
@@ -262,6 +290,8 @@ clgLinkedList.push(24);
 console.log(clgLinkedList)
 // console.log(clgLinkedList.getFisrtElement())
 // console.log(clgLinkedList.getLastElement())
+// console.log(clgLinkedList.getElementByIndex(1))
 
+console.log(clgLinkedList.set(0,60));
+console.log(clgLinkedList)
 
-console.log(clgLinkedList.getElementByIndex(0))
