@@ -250,6 +250,39 @@ class customLinkedList {
         // return temp
     }
 
+
+    //okey !! another challenge is here which is "insert " method.....
+    insert(idx, val){
+        if(idx < 0 || idx === null || idx > this.length){
+            return undefined;
+        }
+
+        let point = this.head;
+
+        if(idx === 0){
+            let new_node = new node(val);
+            new_node.next = this.head;
+            this.head = new_node;
+            this.length ++;
+            return this.head;
+        }
+        else if(idx === this.length){
+            this.push(val)
+            return;
+        }
+
+        //for middle inserting....
+        for(let i = 0; i < idx-1; i++){
+            point = point.next;
+        }
+
+        let new_node = new node(val);
+        new_node.next = point.next;
+        point.next = new_node;
+        this.length ++;
+        return new_node;
+    }
+
 }
 
 
@@ -287,11 +320,24 @@ clgLinkedList.push(24);
 
 
 
-console.log(clgLinkedList)
+// console.log(clgLinkedList)
 // console.log(clgLinkedList.getFisrtElement())
 // console.log(clgLinkedList.getLastElement())
 // console.log(clgLinkedList.getElementByIndex(1))
 
-console.log(clgLinkedList.set(0,60));
+// console.log(clgLinkedList.set(0,60));
 console.log(clgLinkedList)
 
+clgLinkedList.insert(4,1000);
+clgLinkedList.insert(5,"hello");
+clgLinkedList.insert(6,"do");
+
+
+
+
+
+
+
+console.log(clgLinkedList)
+
+// console.log(clgLinkedList.getElementByIndex(2))
