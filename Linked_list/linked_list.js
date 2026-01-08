@@ -283,6 +283,27 @@ class customLinkedList {
         return new_node;
     }
 
+
+
+    //Let's implement a very easy method which is "size " method. that return the total element number that called size.... (not length.)
+    size(){
+        let counter = 0;
+        let temp = this.head;
+
+        while(temp){
+            counter++;
+            temp = temp.next;
+        }
+        return counter;
+    }//importent note.:.: here we can return "this.length" cause this is more faster!! 
+
+
+    //and this is more easier.... Clear method...
+    clear(){
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
 }
 
 
@@ -341,3 +362,6 @@ clgLinkedList.insert(6,"do");
 console.log(clgLinkedList)
 
 // console.log(clgLinkedList.getElementByIndex(2))
+
+clgLinkedList.clear()
+console.log(clgLinkedList)
