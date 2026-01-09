@@ -84,7 +84,7 @@
 //first need to create a node mainly....
 class node {
     constructor(value){
-        this.head = value;
+        this.head = value;   //this.head should be "this.value" that I use in next-doubly linkedlist 
         this.next = null;
     }
 }
