@@ -26,7 +26,6 @@ class doubly_linkedlist {
     push(value){
         let newNode = new Node(value);
 
-
         if(!this.head){
             this.head = newNode;
             this.tail = newNode;
@@ -37,6 +36,36 @@ class doubly_linkedlist {
         }
         this.length ++;
     }
+
+
+    //POP method....
+    pop(){
+        if(!this.head){
+            return undefined;
+        }else if(this.length === 1){
+            this.head = null;
+            this.tail = null;
+        }
+
+        let temp = this.tail; //it was "this.head" when using a loop.
+        // let prev = this.head;
+
+        // while(temp.next){
+        //     prev = temp;
+        //     temp = prev.next;
+        // } //we can easily do this without any loop cause this is a dobly linkedlist.....
+
+
+        
+        this.tail = temp.prev;
+        this.tail.next = null;
+        temp.prev = null;
+
+        this.length --;
+
+        return temp;
+
+    }
 }
 
 
@@ -44,6 +73,11 @@ class doubly_linkedlist {
 
 
 let test_doubleList = new doubly_linkedlist(1);
-test_doubleList.push(3)
+test_doubleList.push(3);
+test_doubleList.push(4);
+// test_doubleList.push(5);
 
+console.log(test_doubleList)
+
+test_doubleList.pop();
 console.log(test_doubleList)
