@@ -66,6 +66,24 @@ class doubly_linkedlist {
         return temp;
 
     }
+
+
+    //UNSHIFT method.....
+    unshift(value){
+        let newNode = new Node(value);
+
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }
+
+        newNode.next = this.head;
+        this.head.prev = newNode;
+        this.head = newNode;
+        this.length ++;
+
+        return this;
+    }
 }
 
 
@@ -81,3 +99,7 @@ console.log(test_doubleList)
 
 test_doubleList.pop();
 console.log(test_doubleList)
+
+test_doubleList.unshift(4);
+console.log(test_doubleList)
+
