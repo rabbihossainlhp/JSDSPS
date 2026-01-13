@@ -84,6 +84,25 @@ class doubly_linkedlist {
 
         return this;
     }
+
+
+    //now time to implement SHIFT method.... similar with single linkedlist.....
+    shift(){
+        if(!this.head){
+            return undefined;
+        }
+
+        
+        this.head = this.head.next;
+        this.head.prev = null;
+        this.length --;
+
+        if(this.length === 0){
+            this.tail = null
+        }
+
+        return temp;
+    }
 }
 
 
@@ -95,11 +114,19 @@ test_doubleList.push(3);
 test_doubleList.push(4);
 // test_doubleList.push(5);
 
+//normal log for printing the list.....
 console.log(test_doubleList)
 
+//log for pop method.
 test_doubleList.pop();
 console.log(test_doubleList)
 
+//log for unshift method.
 test_doubleList.unshift(4);
+console.log(test_doubleList)
+
+
+//log for shift method.
+test_doubleList.shift();
 console.log(test_doubleList)
 
