@@ -97,11 +97,41 @@ class doubly_linkedlist {
         this.head.prev = null;
         this.length --;
 
-        if(this.length === 0){
-            this.tail = null
+        if(this.length === 1){
+            this.tail = null;
+            this.head = null;
         }
 
-        return temp;
+        return ;
+    }
+
+
+
+    //now time to implement reverse mechanism......
+    normalReverse (){
+        let temp = this.head;
+
+        if(!this.head){
+            return undefined;
+        }
+
+        this.head = this.tail;
+        this.tail = temp;
+
+        let next = temp;
+        let prev = null;
+
+        for(let i = 0; i<this.length; i++){
+            next = temp.next;
+
+            temp.next = prev;
+            temp.prev = next;
+            
+            prev = temp;
+            temp = next;
+        }
+
+        return ;
     }
 }
 
@@ -117,16 +147,19 @@ test_doubleList.push(4);
 //normal log for printing the list.....
 console.log(test_doubleList)
 
-//log for pop method.
-test_doubleList.pop();
+// //log for pop method.
+// test_doubleList.pop();
+// console.log(test_doubleList)
+
+// //log for unshift method.
+// test_doubleList.unshift(4);
+// console.log(test_doubleList)
+
+
+// //log for shift method.
+// test_doubleList.shift();
+// console.log(test_doubleList)
+
+//checking normalReverse...
+test_doubleList.normalReverse()
 console.log(test_doubleList)
-
-//log for unshift method.
-test_doubleList.unshift(4);
-console.log(test_doubleList)
-
-
-//log for shift method.
-test_doubleList.shift();
-console.log(test_doubleList)
-
