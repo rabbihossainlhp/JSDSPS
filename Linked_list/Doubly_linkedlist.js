@@ -109,11 +109,11 @@ class doubly_linkedlist {
 
     //now time to implement reverse mechanism......
     normalReverse (){
-        let temp = this.head;
-
         if(!this.head){
             return undefined;
         }
+
+        let temp = this.head;
 
         this.head = this.tail;
         this.tail = temp;
@@ -142,7 +142,7 @@ class doubly_linkedlist {
 let test_doubleList = new doubly_linkedlist(1);
 test_doubleList.push(3);
 test_doubleList.push(4);
-// test_doubleList.push(5);
+test_doubleList.push(5);
 
 //normal log for printing the list.....
 console.log(test_doubleList)
