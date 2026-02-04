@@ -41,7 +41,7 @@ class CoustomStack {
             this.top = null;
             this.length = 0;
 
-            re
+            
         }
 
         this.top = temp.next;
@@ -49,7 +49,7 @@ class CoustomStack {
 
         this.length --;
 
-        return this;
+        return temp;
     }
 }
 
