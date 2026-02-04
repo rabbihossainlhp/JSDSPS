@@ -27,7 +27,31 @@ class NewQueue {
 
         return newItemNode;
     }
+
+
+
+    dequeue(){
+        let temp = this.first;
+        if(this.length === 0){
+            return undefined;
+        }
+        if(this.length === 1){
+            this.first = null;
+            this.last = null;
+            this.length = 0;
+        }
+
+        this.first = this.first.right;
+        temp.right = null;
+        this.length --;
+
+        return this;
+
+
+
+    }
 }
+
 
 
 
@@ -40,4 +64,7 @@ console.log(testQueue)
 //test Enqueue method...
 testQueue.enqueue(2);
 testQueue.enqueue(3)
+testQueue.enqueue(4);
+console.log(testQueue)
+testQueue.dequeue();
 console.log(testQueue)
