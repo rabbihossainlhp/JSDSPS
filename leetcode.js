@@ -256,3 +256,74 @@ const twoSum = (nums,target) => {
     }
 }
 console.log(twoSum([1,2,3,4,3,4,5,6,7],9))
+
+
+
+
+
+
+
+
+
+
+
+
+//now time to solve a leetcode problem date---> 05.02.2026
+// I direct copy the problem's boilerplate from leetcode and that is ...
+
+var MinStack = function() {
+    this.stack = [];
+    this.minStack = [];
+};
+
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function(val) {
+    this.stack.push(val);
+
+    if(this.minStack.length === 0 || val <= this.minStack[this.minStack.length -1]){
+        this.minStack.push(val)
+    }
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    let removedItem = this.stack.pop();
+
+    if(removedItem === this.minStack[this.minStack.length -1]){
+        this.minStack.pop();
+    }
+    
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    return this.stack[this.stack.length -1];
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+    return this.minStack[this.minStack.length -1]
+};
+
+
+
+//  * Your MinStack object will be instantiated and called as such:
+var obj = new MinStack()
+obj.push(2)
+obj.push(3)
+obj.pop()
+var param_3 = obj.top()
+var param_4 = obj.getMin()
+
+// console.log(obj)
+// console.log(param_4)
