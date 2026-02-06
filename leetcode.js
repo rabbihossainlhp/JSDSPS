@@ -327,3 +327,48 @@ var param_4 = obj.getMin()
 
 // console.log(obj)
 // console.log(param_4)
+
+
+
+
+
+
+
+
+//isValidParentheses challenge.....leetcode-20 & date---> 06-02-2026
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+    const stack = [];
+    const bracketsPairs = {
+        "(":")",
+        "{":"}",
+        "[":"]"
+    }
+
+
+    for(let char of s){
+        if(char in bracketsPairs){
+            stack.push(char);
+        }
+        else{
+            if(stack.length === 0){
+                return false
+            }
+
+            let top = stack.pop();
+
+            if(bracketsPairs[top]  !== char){
+                return false
+            }
+        }
+    }
+    
+    return stack.length === 0;
+};
+
+
+console.log(isValid("())"))
