@@ -70,3 +70,47 @@ newStack.pop();
 newStack.pop();
 newStack.pop();
 console.log(newStack);
+
+
+
+
+
+
+
+
+
+
+
+//isValidParentheses challenge.....
+const isValidParentheses = (str) =>{
+    const stack = [];
+
+    const brackets = {
+        "}":"{",
+        "]":"[",
+        ")":"(",
+    }
+
+
+    for(let char of str){
+        if(char === "{" || char === "(" || char === "["){
+            stack.push(char);
+        }
+        else if (char === "}" || char === ")" || char === "]"){
+            if(stack.length === 0){
+                return false;
+            }
+
+            let top = stack.pop();
+            if(top !== brackets[char]){
+                return false;
+            }
+        }
+    }
+
+    return  stack.length === 0;
+}
+
+
+
+console.log(isValidParentheses("()"))
