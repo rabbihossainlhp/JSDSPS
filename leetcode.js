@@ -372,3 +372,32 @@ var isValid = function(s) {
 
 
 console.log(isValid("())"))
+
+
+
+
+
+
+//Reverse String challenge from leetcode0-344 & date---> 07-02-2026
+
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.---- {this is very importent. I failed first time because of this}
+ */
+var reverseString = function(s) {
+    let left = 0;
+    let right = s.length-1;
+
+    while(left<right){
+        let temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+
+        left ++;
+        right --;
+    }
+};
+
+
+console.log(reverseString(["H","e","l","l","o"]))
+

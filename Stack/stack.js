@@ -114,3 +114,22 @@ const isValidParentheses = (str) =>{
 
 
 console.log(isValidParentheses("()"))
+
+
+
+
+
+
+
+//Now we've one more challenge which is "Reverse String Using Stack";
+const revStringStack = (str) =>{
+    const revStack = [];
+
+    for(let i = str.length-1; i>=0; i--){
+        revStack.push(str[i]);
+    }
+
+    return revStack.join('');
+}
+
+console.log(revStringStack("hello world"))
