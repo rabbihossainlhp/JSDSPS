@@ -11,7 +11,7 @@ class HashTable {
         let prime_number = 31;
 
         for( let i = 0; i<Math.min(key.length, 100); i++){
-            let charCode = key.charCodeAt(0) - 96;
+            let charCode = key.charCodeAt(i) - 96;
             sum = (sum * prime_number + charCode) % this.keyMap.length;
         }
 
