@@ -1,38 +1,42 @@
 // now I'm gonna try a difficult type of DSA which is "Hash Table";
 
+
+
+
+
+
 class HashTable {
-    constructor(size = 5){
-        this.keyMap = new Array(size);
+    constructor(size=7){
+        this.table = new Array(size);
+        this.size = 0;
     }
 
 
     _hashFunc(key){
-        let sum = 0;
-        let prime_number = 31;
+        let hash = 0;
 
-        for( let i = 0; i<Math.min(key.length, 100); i++){
-            let charCode = key.charCodeAt(i) - 96;
-            sum = (sum * prime_number + charCode) % this.keyMap.length;
+        for(let i=0; i<key.length; i++){
+            hash+= key.charCodeAt(i);
         }
-
-        return sum;
+        return hash%this.table.length;
     }
 
 
     set(key,value){
         let index = this._hashFunc(key);
-
-        if(!this.keyMap[index]){
-            this.keyMap = [];
+        if(this.table[index]===undefined){
+            this.table[index] = [];
         }
 
-        this.keyMap[index].push([key,value]);
+        let chain = this.table[index];
+        for(let i=0; i<chain.length; i++){
+            if(chain[i][0]===key){
+                chain[i][1] = value;
+                return;
+            }
+        }
+
+        chain.push([key,value]);
+        this.size ++;
     }
 }
-
-
-
-const testHash = new HashTable();
-testHash.set("Hellow","43432432")
-
-console.log(testHash)
