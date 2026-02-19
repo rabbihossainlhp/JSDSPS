@@ -39,4 +39,38 @@ class HashTable {
         chain.push([key,value]);
         this.size ++;
     }
+
+
+
+    //GET function
+    get(key){
+        let key_index = this._hashFunc(key);
+
+        if(this.table[key_index]===undefined){
+            return undefined;
+        };
+
+        let chain = this.table[key_index];
+        if(chain){
+            for(let i=0; i<chain.length; i++){
+                if(chain[i][0]===key){
+                    return chain[i][1];
+                }
+            }
+        }
+        return undefined;
+        
+    }
 }
+
+
+
+
+let NewHash = new HashTable(12);
+NewHash.set("Roll",1313);
+NewHash.set("Name","Hayat");
+NewHash.set("Name","Mahmud");
+
+
+console.log(NewHash.get("Name"));
+console.log(NewHash)
