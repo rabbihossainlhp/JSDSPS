@@ -61,6 +61,36 @@ class HashTable {
         return undefined;
         
     }
+
+
+
+
+    //Get All Keys.....!
+    getAllKeys(){
+        let keys = [];
+        for(let i = 0; i<this.table.length; i++){
+            if(this.table[i]){
+                for(let j=0; j<this.table[i].length; j++){
+                    keys.push(this.table[i][j][0])
+                }
+            }
+        }
+
+        return keys;
+    }
+
+    //Get all values.....
+    getAllValues(){
+        let values = [];
+        for(let i = 0; i<this.table.length; i++){
+            if(this.table[i]){
+                for(let j=0; j<this.table[i].length; j++){
+                    values.push(this.table[i][j][1]);
+                }
+            }
+        }
+        return values;
+    }
 }
 
 
@@ -69,8 +99,10 @@ class HashTable {
 let NewHash = new HashTable(12);
 NewHash.set("Roll",1313);
 NewHash.set("Name","Hayat");
-NewHash.set("Name","Mahmud");
+NewHash.set("Name","Mahmud");//This will replace previous vaule because of the same key (logic in the function code)
 
 
 console.log(NewHash.get("Name"));
 console.log(NewHash)
+console.log(NewHash.getAllKeys());
+console.log(NewHash.getAllValues())
