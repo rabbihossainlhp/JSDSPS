@@ -25,6 +25,14 @@ This repository documents my daily progress as I learn, implement, and master co
 - Each function is self-contained and can be run independently.
 - Use the code as a reference or inspiration for your own learning journey!
 
+## How to Run the Code
+
+1. Clone the repo
+2. Open terminal
+3. Run:
+   node leetcode.js
+   node initial.js
+
 ## Progress
 
 - [x] Prime number finder

@@ -106,3 +106,26 @@ console.log(NewHash.get("Name"));
 console.log(NewHash)
 console.log(NewHash.getAllKeys());
 console.log(NewHash.getAllValues())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///Wrod-Frequency leet code problem....
+const wordFreq = (text)=>{
+    const text_array = text.split(" ");
+    const compare = text_array[0]===text_array[1];
+    return compare;
+}
+
+
+console.log(wordFreq("wroes wroes sfsfs"))
