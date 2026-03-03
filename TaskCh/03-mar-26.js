@@ -49,10 +49,6 @@ console.log(countFrequency(["a","d","a"]))
 
 
 
-
-
-
-
 //Now this challenge comes from real job scenario.....
 
 function getDashInfo(arr){
