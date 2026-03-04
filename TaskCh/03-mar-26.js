@@ -35,7 +35,7 @@ function countFrequency(arr) {
         }
     }
 
-    return map;
+    return Object.fromEntries(map);
 }
 
 
@@ -72,3 +72,32 @@ console.log(getDashInfo(
   { status: "pending" }
 ]
 ))
+
+
+/**
+ * |
+ * |
+ * |
+ * |
+ * |
+ * |
+ * |
+ * |
+ * |This is the better and clean version of "getDashInfo"
+ */
+
+function getDashInfo(arr) {
+  const map = new Map();
+
+  for (let i = 0; i < arr.length; i++) {
+    const status = arr[i].status;
+
+    if (!map.has(status)) {
+      map.set(status, 1);
+    } else {
+      map.set(status, map.get(status) + 1);
+    }
+  }
+
+  return Object.fromEntries(map);
+}
