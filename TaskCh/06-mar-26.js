@@ -28,20 +28,33 @@ console.log(counter());
 
 
 //this is interview test....
-const container = document.getElementById('button');
+// const container = document.getElementById('button');
 
-const users = [
-  { id: 1, name: "Alex" },
-  { id: 2, name: "Sam" },
-]
+// const users = [
+//   { id: 1, name: "Alex" },
+//   { id: 2, name: "Sam" },
+// ]
 
-users.forEach(user=>{
-    const button = document.createElement('button');
-    button.textContent = user.name;
+// users.forEach(user=>{
+//     const button = document.createElement('button');
+//     button.textContent = user.name;
 
-    button.addEventListener('click',()=>{
-        console.log(user.name);
-    })
+//     button.addEventListener('click',()=>{
+//         console.log(user.name);
+//     })
 
-    container.appendChild(button);
-})
+//     container.appendChild(button);
+// })
+
+
+
+
+
+
+//Normal test...
+for (let i = 1; i <= 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+
