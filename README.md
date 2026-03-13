@@ -1,51 +1,110 @@
-# JSDS: JavaScript Data Structures & LeetCode Journey
+# JSDS: JavaScript Data Structures & Algorithms
 
-Welcome to my JavaScript Data Structures and LeetCode problem-solving journey! 🚀
+A hands-on JavaScript learning journal — built day by day, topic by topic.
 
 ## About
 
-This repository documents my daily progress as I learn, implement, and master core data structures and algorithms using JavaScript. It also includes my solutions to various LeetCode problems, with a focus on building strong problem-solving skills and deepening my understanding of JavaScript fundamentals.
-
-## Structure
-
-- **initial.js**: My first steps with basic algorithms (primes, factorial, sum of digits, etc.).
-- **leetcode.js**: My LeetCode solutions, including explanations and iterative improvements.
-- **README.md**: This file, summarizing my journey and goals.
-
-## Goals
-
-- Strengthen my grasp of JavaScript syntax and logic.
-- Practice and master classic data structures and algorithms.
-- Solve a wide range of LeetCode problems.
-- Track my growth and reflect on my learning process.
-
-## How to Use
-
-- Browse the code files to see my solutions and learning notes.
-- Each function is self-contained and can be run independently.
-- Use the code as a reference or inspiration for your own learning journey!
-
-## How to Run the Code
-
-1. Clone the repo
-2. Open terminal
-3. Run:
-   node leetcode.js
-   node initial.js
-
-## Progress
-
-- [x] Prime number finder
-- [x] Factorial calculator
-- [x] Sum of digits
-- [x] Find Maximum & Minimum number in  an  array
-- [x] Print array in reverse    
-- [x] LeetCode: Add Digits
-- [x] LeetCode: Number Complement
-- [x] LeetCode: Running sum of 1D array 
-- [x] LeetCode: Richest Coustomer Welth
-- [ ] More to come...
+This repo tracks my journey through core data structures, algorithms, and LeetCode problems using vanilla JavaScript. Every folder is a topic, every file is a session. No shortcuts — everything is built from scratch.
 
 ---
 
-Thanks for
+## Repository Structure
+
+```
+JSDS/
+├── initial.js              # Core algorithm practice (primes, factorial, etc.)
+├── leetcode.js             # LeetCode problem solutions
+├── New_array/
+│   └── array.js            # Array methods and operations
+├── Linked_list/
+│   ├── linked_list.js      # Singly linked list (push, pop, ...)
+│   └── Doubly_linkedlist.js# Doubly linked list
+├── Stack/
+│   └── stack.js            # Custom stack (push, pop)
+├── Queue/
+│   └── queue.js            # Custom queue (enqueue, dequeue)
+├── Hash/
+│   └── hashTable.js        # Hash table with chaining (set, get)
+├── Tree/
+│   └── Binary_search_tree.js # BST (in progress)
+└── TaskCh/
+    ├── challenge.js        # Standalone challenges
+    └── DD-mon-YY.js        # Daily coding challenges
+```
+
+---
+
+## Data Structures Implemented
+
+| Structure | File | Methods |
+|---|---|---|
+| Array | `New_array/array.js` | Custom array operations |
+| Singly Linked List | `Linked_list/linked_list.js` | `push`, `pop` |
+| Doubly Linked List | `Linked_list/Doubly_linkedlist.js` | — |
+| Stack | `Stack/stack.js` | `push`, `pop` |
+| Queue | `Queue/queue.js` | `enqueue`, `dequeue` |
+| Hash Table | `Hash/hashTable.js` | `set`, `get` (with chaining) |
+| Binary Search Tree | `Tree/Binary_search_tree.js` | (in progress) |
+
+---
+
+## Algorithms & Concepts
+
+- Prime number finder
+- Factorial calculator
+- Sum of digits
+- Find max & min in an array
+- Print array in reverse
+- Recursion (find max via recursion)
+
+---
+
+## LeetCode Problems Solved
+
+| # | Problem | File |
+|---|---|---|
+| 1 | Add Digits | `leetcode.js` |
+| 2 | Number Complement | `leetcode.js` |
+| 3 | Running Sum of 1D Array | `leetcode.js` |
+| 4 | Richest Customer Wealth | `leetcode.js` |
+
+---
+
+## Daily Task Challenges (`TaskCh/`)
+
+Daily practice files starting from **Feb 26, 2026**. Each file contains focused problems worked on that day.
+
+| Date | Topic |
+|---|---|
+| Feb 26 | Array basics |
+| Feb 27 | Array practice |
+| Mar 03–13 | Mixed DSA challenges |
+| Mar 14 | Recursion — `findMax` in array |
+
+---
+
+## How to Run
+
+```bash
+# Clone the repo
+git clone <repo-url>
+cd JSDS
+
+# Run any file
+node initial.js
+node leetcode.js
+node Stack/stack.js
+node TaskCh/14-mar-26.js
+```
+
+---
+
+## Goals
+
+- [x] Build all core data structures from scratch
+- [x] Solve beginner LeetCode problems
+- [x] Daily challenge habit (ongoing since Feb 26)
+- [ ] Complete Binary Search Tree (insert, search, traversal)
+- [ ] Add graph data structure
+- [ ] Reach 20+ LeetCode problems solved
+- [ ] Add recursion challenges folder
