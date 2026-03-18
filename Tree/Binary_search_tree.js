@@ -49,6 +49,27 @@ class BST {
         }
         
     }
+
+
+
+    includes(value){
+        
+        if(!this.root) return undefined;
+
+        let temp = this.root;
+
+        while(temp){
+            if(value > temp.value){
+                temp = temp.right;
+            }
+            else if(value < temp.value){
+                temp = temp.left;
+            }
+            else if(value === temp.value) return true;
+            
+        }
+        return false
+    }
 }
 
 
@@ -58,3 +79,5 @@ tree.insert(2);
 tree.insert(2);
 tree.insert(5);
 console.log(tree)
+
+console.log(tree.includes(9));
