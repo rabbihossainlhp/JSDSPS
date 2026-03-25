@@ -51,7 +51,6 @@ class BST {
     }
 
 
-
     includes(value){
         
         if(!this.root) return undefined;
@@ -70,14 +69,34 @@ class BST {
         }
         return false
     }
+
+
+    bfs(){
+        let current = this.root;
+        let queue = [];
+        let data = [];
+
+        queue.push(current);
+
+        while(queue.length){
+            current = queue.shift();
+            data.push(current.value);
+
+            if(current.left) queue.push(current.left);
+            if(current.right) queue.push(current.right);
+        }
+        return data;
+    }
 }
 
 
 const tree = new BST();
 
+tree.insert(6)
 tree.insert(2);
-tree.insert(2);
+tree.insert(3);
 tree.insert(5);
 console.log(tree)
 
-console.log(tree.includes(9));
+console.log(tree.includes(2));
+console.log(tree.bfs())
