@@ -8,8 +8,6 @@ class Node {
 
 
 
-
-
 class BST {
     constructor() {
         this.root = null;
