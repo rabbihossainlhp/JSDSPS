@@ -2,7 +2,7 @@
 
 A hands-on JavaScript learning journal — built day by day, topic by topic.
 
-## About
+## About...
 
 This repo tracks my journey through core data structures, algorithms, and LeetCode problems using vanilla JavaScript. Every folder is a topic, every file is a session. No shortcuts — everything is built from scratch.
 
