@@ -8,7 +8,7 @@ This repo tracks my journey through core data structures, algorithms, and LeetCo
 
 ---
 
-## Repository Structure
+## Repository Structure...
 
 ```
 JSDS/
