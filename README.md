@@ -34,7 +34,7 @@ JSDS/
 
 ---
 
-## Data Structures Implemented
+## Data Structures Implemented...
 
 | Structure | File | Methods |
 |---|---|---|
