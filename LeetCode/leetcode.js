@@ -408,15 +408,15 @@ console.log(reverseString(["H","e","l","l","o"]))
 
 //addTwo number challenge which are basically medium lave problem ==> 18-03-26
 var addTwoNumbers = function(l1, l2) {
-    let list1 = parseInt(l1.reverse().join(''));
-    let list2 = parseInt(l2.reverse().join(''));
+    let list1 = l1.reverse().join('');
+    let list2 = l2.reverse().join('');
 
-    let cal = (list1+list2).toString();
-    let result = cal.split("").reverse();
-    
-    return result.map(Number);
+
+    let sum = parseInt(list1)+parseInt(list2)
+
+    return sum;
 };
 
 
-console.log(addTwoNumbers([1,2,4],[2,4,5]))  //this is an unsolved problem
+console.log(addTwoNumbers([2,4,3],[5,6,4]))  //this is an unsolved problem
 
