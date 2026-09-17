@@ -99,7 +99,7 @@ class HashTable {
 let NewHash = new HashTable(12);
 NewHash.set("Roll",1313);
 NewHash.set("Name","Hayat");
-NewHash.set("Name","Mahmud");//This will replace previous vaule because of the same key (logic in the function code)
+NewHash.set("Name2","Mahmud");//This will replace previous vaule because of the same key (logic in the function code)
 
 
 console.log(NewHash.get("Name"));
