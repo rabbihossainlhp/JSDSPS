@@ -14,7 +14,7 @@ var isPalindrome = function(s) {
     }
 
 
-    if(shape.length === 1 || 0 ) return true;
+    if(shape.length <=1 ) return true;
 
     let left = 0;
     let right = shape.length-1
